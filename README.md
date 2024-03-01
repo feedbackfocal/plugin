@@ -17,7 +17,7 @@ TypeScript Plugin for [Feedback Focal](https://feedbackfocal.com).
 1. Import `addFeedbackFocal` from `@feedbackfocal/plugin`.
 2. Call `addFeedbackFocal` in `main.tsx` and pass configuration:
 
-```diff
+```tsx
 import { addFeedbackFocal } from "@feedbackfocal/plugin";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -51,11 +51,11 @@ addFeedbackFocal({
 `screen-capture-api`
 
 - Captures visually accurate screenshot using [Screen Capture API](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API).
-  - This method will prompt the user to allow the screenshot to be taken and select manually select the current tab, unless their browser supports the experimental [preferCurrentTab](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab) option.
+  - This method will prompt the user to allow the screenshot to be taken and manually select the current tab unless their browser supports the experimental [preferCurrentTab](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab) option.
 - All major mobile browsers do not support the Screen Capture API.
 
 `dom-to-image`
 
 - Mimics a screenshot by cloning the DOM, painting it on a canvas, and converting that to an image.
-  - Currently uses [bubkoo/html-to-image](https://github.com/bubkoo/html-to-image) to handle to the DOM to image conversion.
-- Does not require additional prompting of the user and (theoretically) should work in all browsers, unline the Screen Capture API, but produces lower quality images which commonly have artifacts or other rendering issues, and do not accurately represent that the user sees.
+  - Currently uses [bubkoo/html-to-image](https://github.com/bubkoo/html-to-image) to handle the DOM to image conversion.
+- Does not require additional prompting of the user and (theoretically) should work in all browsers, unline the Screen Capture API, but produces lower quality images which commonly have artifacts or other rendering issues, and do not accurately represent what the user sees.
