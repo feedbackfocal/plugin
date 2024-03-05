@@ -3,7 +3,6 @@
   "description": "Feedback Focal plugin for TypeScript and JavaScript",
   "version": "0.0.1",
   "type": "module",
-  "private": false,
   "exports": {
     ".": {
       "import": "./dist/plugin.mjs",
