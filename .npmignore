@@ -1,1 +1,9 @@
 .github
+
+appsettings.json
+appsettings.local.json
+package-lock.json
+plugin.ts
+publish.sh
+tsconfig.json
+rollup.config.js
