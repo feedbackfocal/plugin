@@ -58,4 +58,4 @@ addFeedbackFocal({
 
 - Mimics a screenshot by cloning the DOM, painting it on a canvas, and converting that to an image.
   - Currently uses [bubkoo/html-to-image](https://github.com/bubkoo/html-to-image) to handle the DOM to image conversion.
-- Does not require additional prompting of the user and (theoretically) should work in all browsers, unline the Screen Capture API, but produces lower quality images which commonly have artifacts or other rendering issues, and do not accurately represent what the user sees.
+- Does not require additional prompting of the user and (theoretically) should work in all browsers, unlike the Screen Capture API, but produces lower quality images which commonly have artifacts or other rendering issues, and may not accurately represent what the user sees.
